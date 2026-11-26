@@ -1,0 +1,5 @@
+@import './styles/global.css';
+@import './styles/layout.css';
+@import './styles/lms.css';
+@import './styles/attendance.css';
+@import './styles/profile.css';

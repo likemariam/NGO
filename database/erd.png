@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+  <rect width="900" height="600" fill="#f8fafc"/>
+  <text x="450" y="50" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1e293b">NGO DMS — Entity Relationship Diagram</text>
+
+  <!-- users -->
+  <rect x="20" y="80" width="160" height="260" rx="6" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="20" y="80" width="160" height="30" rx="6" fill="#2563eb"/>
+  <text x="100" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="13" font-weight="bold">users</text>
+  <text x="30" y="130" font-family="Arial" font-size="11" fill="#374151">PK id BIGSERIAL</text>
+  <text x="30" y="148" font-family="Arial" font-size="11" fill="#374151">first_name VARCHAR</text>
+  <text x="30" y="166" font-family="Arial" font-size="11" fill="#374151">last_name VARCHAR</text>
+  <text x="30" y="184" font-family="Arial" font-size="11" fill="#374151">email VARCHAR UNIQUE</text>
+  <text x="30" y="202" font-family="Arial" font-size="11" fill="#374151">password VARCHAR</text>
+  <text x="30" y="220" font-family="Arial" font-size="11" fill="#374151">role VARCHAR</text>
+  <text x="30" y="238" font-family="Arial" font-size="11" fill="#374151">phone VARCHAR</text>
+  <text x="30" y="256" font-family="Arial" font-size="11" fill="#374151">enabled BOOLEAN</text>
+  <text x="30" y="274" font-family="Arial" font-size="11" fill="#374151">created_at TIMESTAMP</text>
+
+  <!-- materials -->
+  <rect x="220" y="80" width="160" height="210" rx="6" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="220" y="80" width="160" height="30" rx="6" fill="#16a34a"/>
+  <text x="300" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="13" font-weight="bold">materials</text>
+  <text x="230" y="130" font-family="Arial" font-size="11" fill="#374151">PK id BIGSERIAL</text>
+  <text x="230" y="148" font-family="Arial" font-size="11" fill="#374151">title VARCHAR</text>
+  <text x="230" y="166" font-family="Arial" font-size="11" fill="#374151">file_path VARCHAR</text>
+  <text x="230" y="184" font-family="Arial" font-size="11" fill="#374151">file_type VARCHAR</text>
+  <text x="230" y="202" font-family="Arial" font-size="11" fill="#374151">file_size BIGINT</text>
+  <text x="230" y="220" font-family="Arial" font-size="11" fill="#6b7280">FK uploaded_by</text>
+  <text x="230" y="238" font-family="Arial" font-size="11" fill="#374151">created_at TIMESTAMP</text>
+
+  <!-- attendance -->
+  <rect x="420" y="80" width="160" height="210" rx="6" fill="#fff" stroke="#d97706" stroke-width="2"/>
+  <rect x="420" y="80" width="160" height="30" rx="6" fill="#d97706"/>
+  <text x="500" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="13" font-weight="bold">attendance</text>
+  <text x="430" y="130" font-family="Arial" font-size="11" fill="#374151">PK id BIGSERIAL</text>
+  <text x="430" y="148" font-family="Arial" font-size="11" fill="#6b7280">FK user_id</text>
+  <text x="430" y="166" font-family="Arial" font-size="11" fill="#374151">check_in_time</text>
+  <text x="430" y="184" font-family="Arial" font-size="11" fill="#374151">check_out_time</text>
+  <text x="430" y="202" font-family="Arial" font-size="11" fill="#374151">location VARCHAR</text>
+  <text x="430" y="220" font-family="Arial" font-size="11" fill="#374151">notes TEXT</text>
+  <text x="430" y="238" font-family="Arial" font-size="11" fill="#374151">created_at TIMESTAMP</text>
+
+  <!-- projects -->
+  <rect x="620" y="80" width="160" height="210" rx="6" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="620" y="80" width="160" height="30" rx="6" fill="#7c3aed"/>
+  <text x="700" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="13" font-weight="bold">projects</text>
+  <text x="630" y="130" font-family="Arial" font-size="11" fill="#374151">PK id BIGSERIAL</text>
+  <text x="630" y="148" font-family="Arial" font-size="11" fill="#374151">name VARCHAR</text>
+  <text x="630" y="166" font-family="Arial" font-size="11" fill="#374151">description TEXT</text>
+  <text x="630" y="184" font-family="Arial" font-size="11" fill="#374151">start_date DATE</text>
+  <text x="630" y="202" font-family="Arial" font-size="11" fill="#374151">end_date DATE</text>
+  <text x="630" y="220" font-family="Arial" font-size="11" fill="#374151">status VARCHAR</text>
+  <text x="630" y="238" font-family="Arial" font-size="11" fill="#374151">created_at TIMESTAMP</text>
+
+  <!-- quizzes row -->
+  <rect x="20" y="380" width="160" height="150" rx="6" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="20" y="380" width="160" height="30" rx="6" fill="#dc2626"/>
+  <text x="100" y="400" text-anchor="middle" fill="#fff" font-family="Arial" font-size="13" font-weight="bold">quizzes</text>
+  <text x="30" y="430" font-family="Arial" font-size="11" fill="#374151">PK id BIGSERIAL</text>
+  <text x="30" y="448" font-family="Arial" font-size="11" fill="#374151">title VARCHAR</text>
+  <text x="30" y="466" font-family="Arial" font-size="11" fill="#6b7280">FK created_by</text>
+  <text x="30" y="484" font-family="Arial" font-size="11" fill="#374151">created_at TIMESTAMP</text>
+
+  <!-- fundings -->
+  <rect x="620" y="320" width="160" height="150" rx="6" fill="#fff" stroke="#0891b2" stroke-width="2"/>
+  <rect x="620" y="320" width="160" height="30" rx="6" fill="#0891b2"/>
+  <text x="700" y="340" text-anchor="middle" fill="#fff" font-family="Arial" font-size="13" font-weight="bold">fundings</text>
+  <text x="630" y="370" font-family="Arial" font-size="11" fill="#374151">PK id BIGSERIAL</text>
+  <text x="630" y="388" font-family="Arial" font-size="11" fill="#6b7280">FK project_id</text>
+  <text x="630" y="406" font-family="Arial" font-size="11" fill="#6b7280">FK funder_id</text>
+  <text x="630" y="424" font-family="Arial" font-size="11" fill="#374151">amount NUMERIC</text>
+  <text x="630" y="442" font-family="Arial" font-size="11" fill="#374151">funding_date DATE</text>
+
+  <!-- Relationship lines -->
+  <line x1="180" y1="210" x2="220" y2="210" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="100" y1="340" x2="100" y2="380" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="180" y1="210" x2="420" y2="210" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="580" y1="210" x2="620" y2="210" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="700" y1="290" x2="700" y2="320" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4"/>
+
+  <text x="450" y="580" text-anchor="middle" font-family="Arial" font-size="11" fill="#94a3b8">
+    Dashed lines = FK relationships. Generated by NGO DMS team.
+  </text>
+</svg>

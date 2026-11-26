@@ -1,0 +1,10 @@
+target/
+.mvn/
+*.class
+*.jar
+*.war
+!**/src/main/**
+!**/src/test/**
+uploads/
+.env
+application-prod.properties
